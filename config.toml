@@ -1,4 +1,4 @@
-baseURL = "https://optimistic-kare-1ee6e2.netlify.app/"
+baseURL = "/"
 languageCode = "en-us"
 title = "Zauad's Blog"
 theme = "minimal"
