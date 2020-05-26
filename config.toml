@@ -1,6 +1,6 @@
 baseURL = "http://example.com/"
 languageCode = "en-us"
-title = "zauad's Blog"
+title = "Zauad's Blog"
 theme = "minimal"
 disqusShortname = "" # delete this to disable disqus comments
 googleAnalytics = ""
