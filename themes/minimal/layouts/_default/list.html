@@ -1,0 +1,13 @@
+{{ partial "header" . }}
+
+<main style = "text-align: left">
+  
+  <h4 style = "color: #787878; font-family: Operator Mono; font-weight: bold;">r | life | random thoughts</h4>
+  <hr style = "border-top: 1px solid #555" />
+
+    {{ range .Pages }} {{ partial "list-item" . }} {{ end }}
+
+</main>
+
+{{ partial "paginator" . }}
+{{ partial "footer" . }}

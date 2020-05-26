@@ -1,0 +1,45 @@
+{{ partial "header" . }}
+
+<main>
+    <div class="intro">
+        
+        
+        <a href="/"><img href="/" src="img/salawat.svg" alt="from pixabay1" height="30" width="100" /></a>
+        <br />
+        <a href="/"><img href="/" id="splash1" src="img/quill_black22.jpg" alt="from pixabay1" height="180" width="200" /></a>
+        {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
+        <h1 style = "font-family: Operator Mono; font-weight: bold;">{{ markdownify .Site.Title }}</h1>
+        <h5>{{ markdownify .Site.Params.Description }}</h5>
+        <h5>{{ markdownify .Site.Params.author }}</h5>
+        <br />
+        <ul style = "list-style: none;">
+            <li><a href = "/about" style = "color: var(--letterAccent); margin-left: -55px;" ><i class="fa fa-graduation-cap fa-lg"></i> Masters dropout </a></li>
+        </ul>
+        {{ with .Content }} <div class="homepage-content text-justify">{{ . }}</div> {{ end }}
+        
+        <br />
+        
+        {{ $latestcount := .Site.Params.LatestCount | default 1 }}
+	    <section>
+		<h5 style = "margin-left: -10px;">Recent Work</h5>
+		<ul style = "list-style: none;">
+			{{ $pages := where site.RegularPages "Type" "in" "post" }}
+			{{- range (first $latestcount $pages) -}}
+			<li>
+	            {{ $dateformat := .Site.Params.DateFmt | default "Jan 02, 2006" }}
+	            <h5 style = "margin-left: -55px;"><a href="{{ .RelPermalink }}" style = "color: var(--letterAccent);">{{ .Title }}</a></h5>
+                <h5 style = "margin-left: -55px;">{{ .Date.Format $dateformat }}</h5>
+            </li>
+			{{- end -}}
+		</ul>
+	    </section>
+        
+        <br />
+        
+        <p style = "font-size: 15px; font-family: Operator Mono;">
+            "{{ markdownify .Site.Params.quote }}" - {{ markdownify .Site.Params.quoteAuthor }}
+        </p>
+    </div>
+</main>
+
+{{ partial "footer" . }}

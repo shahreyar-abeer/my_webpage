@@ -1,0 +1,12 @@
+
+blockquote {
+  border-left-color: var(--accent) !important;
+}
+
+pre code {
+  font-family: "Operator Mono", sans-serif !important;
+}
+
+h5, body {
+    color: var(--letterAccent) !important;
+}

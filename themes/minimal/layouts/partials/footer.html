@@ -1,0 +1,12 @@
+        <footer>
+            <p class="copyright text-muted">{{ .Site.Params.copyright | default                      "&copy;" | markdownify }} 
+                <a href="{{.Site.RSSLink}}" style="color: var(--headerAccent);"><i class="fa fa-feed"></i> </a>
+            </p>
+            
+        </footer>
+
+        {{ partial "body-close" . }}
+        
+    </body>
+
+</html>

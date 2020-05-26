@@ -1,0 +1,72 @@
+baseURL = "http://example.com/"
+languageCode = "en-us"
+title = "zauad's Blog"
+theme = "minimal"
+disqusShortname = "" # delete this to disable disqus comments
+googleAnalytics = ""
+
+
+
+[params]
+    author = "by Zauad Shahreer Abeer"
+    description = "This is a blog on R, life and some\nrandom thoughts from me."
+    githubUsername = "shahreyar-abeer"
+    accent = "#21759b"
+    headerAccent = "#666"
+    letterAccent = "#585858"
+    showBorder = false
+    backgroundColor = "white"
+    font = "Open Sans" # should match the name on Google Fonts!
+    highlight = false
+    highlightStyle = "default"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "r"]
+    quote = "You can't connect the dots looking forward, you can only connect them looking backwards."
+    quoteAuthor = "Steve Jobs"
+    copyright = "&copy; zauad 2020"
+    css = ["css/custom.css"]
+
+[[menu.main]]
+    url = "/"
+    name = "HOME"
+    weight = 1
+
+[[menu.main]]
+    url = "/about/"
+    name = "ABOUT"
+    weight = 2
+
+[[menu.main]]
+    url = "/post/"
+    name = "BLOG"
+    weight = 3
+    
+
+[[menu.main]]
+    url = "/project/"
+    name = "LIFE"
+    weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+[[menu.icon]]
+    url = "mailto:shahreyar.abeer@gmail.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/shahreyar-abeer"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/shahreyarabeer"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/zauad-shahreer/"
+    name = "linkedin"
+    weight = 4
+
